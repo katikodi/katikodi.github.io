@@ -1,0 +1,36 @@
+:root {
+    --dark-purple: #1c192c;
+    --dusty-blue: #566085;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--dusty-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#square {
+    height: 550px;
+    width: 550px;
+    position: relative;
+    /* borders fungerer som padding her så bildet ikke går utenfor */
+    background-color: var(--dark-purple);
+    border-left: solid var(--dark-purple) 52px;
+    border-right: solid var(--dark-purple) 52px;
+    border-top: solid var(--dark-purple) 44px;
+    border-bottom: solid var(--dark-purple) 44px;
+    border-radius: 5px;
+}
+img {
+    height: 75px;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* setter midtpunktet til midten */
+    pointer-events: none; /* gjør at bildet ikke er clickable */
+}
+.click-animation {
+    transition: left 0.1s, top 0.1s;
+}
