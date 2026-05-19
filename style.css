@@ -1,19 +1,40 @@
+/* ------------- */
+/* BASIC STYLING */
+/* ------------- */
 :root {
     --dark-purple: #1c192c;
     --dusty-blue: #566085;
+    --dusty-pink: #845685;
 }
 body {
     margin: 0;
-    padding: 0;
-    background-color: var(--dusty-blue);
+    padding: 0 80px;
+    background: linear-gradient(var(--dusty-blue), var(--dusty-pink));
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
+    gap: 50px;
 }
+h1 {
+    color: var(--dark-purple);
+    font-family: sans-serif;
+    text-align: center;
+    background: linear-gradient(var(--dusty-blue), var(--dusty-pink));
+    background-color: var(--dark-purple);
+    background-blend-mode: screen;
+    border-radius: 10px;
+    padding: 25px 15px;
+    width: 274px;
+}
+
+/* ------------- */
+/* MOVEMENT AREA */
+/* ------------- */
 #square {
     height: 550px;
     width: 550px;
+    flex-shrink: 0;
     position: relative;
     /* borders fungerer som padding her så bildet ikke går utenfor */
     background-color: var(--dark-purple);
@@ -22,6 +43,7 @@ body {
     border-top: solid var(--dark-purple) 44px;
     border-bottom: solid var(--dark-purple) 44px;
     border-radius: 5px;
+    /* cursor: pointer; fjernet denne fordi trykkingen føltes mer satisfying uten */
 }
 img {
     height: 75px;
